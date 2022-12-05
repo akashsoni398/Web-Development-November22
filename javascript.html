@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="external.js">
+    </script>
+</head>
+<body>
+    <p on onmouseover="document.getElementById('para').innerText = 'mouse over'" onmouseout="document.getElementById('para').innerText = 'mouse out'" id="para">Hello World</p>
+    <form onsubmit="validation()" method="post" action="firstwebsite.html">
+        <input id="name" type="email" required />
+        <button onclick="alert('data entered:'+document.getElementById('name').value)" type="submit">SUBMIT</button>
+    </form>
+    <script type="text/javascript">
+        // single line comments
+        /* multiple 
+        line 
+        comments
+        */
+        
+
+        //variables and datatypes
+        var x = 23;   //int
+        var y = "ddscsd";   //str
+        var z = true;   //boolean
+
+        const s = 34;
+        s=45;
+
+        let l = "dssd";
+
+        var a;   //undefined
+        var b = "";   //null
+
+        var arr = [43,"sdsdv",true]    //arrays
+        arr[0];
+
+        var student1 = {    //objects
+            name: {
+                first:"Akash",
+                middle:"",
+                last:"Soni"
+            },
+            age:25,
+            contact: {
+                email:"fvsdsv",
+                phno:34534534,
+                guardians : {
+                    mother: {
+                        name:"",
+                        number:"",
+                        email:""
+                    }
+                }
+            }
+        }
+        for(var value in student1.contact) {
+            document.write(student1.contact[value])
+        }
+
+
+
+        //printing output
+        document.write("Hello World. This is write function");
+        document.getElementById("para").innerHTML = "Hello World. This is get function";
+        console.log("Hello World. This is console.log function");
+        window.print();
+        window.alert("Hello World. This is alert function");
+
+
+        //notifications - alert, prompt and confirm
+        window.alert("This is a warning");
+        
+        var confirm = window.confirm("Are you sure?")
+        if(confirm==true) {
+            document.write("Comfirmed")
+        }
+        else {
+            document.write("Not confirmed")
+        }
+
+        var name = window.prompt("Enter your name");
+
+
+
+        //conditional operator
+        (!name || name=="") ? document.write("Cancelled") : document.write(name);
+
+
+
+        //functions
+
+        function validation() {
+            if(document.getElementById('phone').value!="" && document.getElementById('phone').value) {
+                
+            }
+        }
+        validation("value")
+
+        var validation = (arg1,arg2) => {
+            for(let i=arg1; i<=arg2; i++) {
+                if(i%2==0) {
+                    document.write(i);
+                }
+            }
+        }
+
+        validation("value")   //function call
+        validation("value1","value2")
+    </script>
+</body>
+</html>
